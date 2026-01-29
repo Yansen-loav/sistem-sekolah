@@ -7,7 +7,17 @@ use App\Controllers\StudentsController;
  
 class Router
 {
- 
+    private array $routes = [];
+
+    public function add(string $method, string $uri, string $controller, string $function): void
+    {
+        $this->routes[] = [
+            'method' => $method,
+            'uri' => $uri,
+            'callback' => $controller,
+            'function' => $function
+        ];
+    }
     public function run()
     {
         $method = $_SERVER['REQUEST_METHOD'];
@@ -15,7 +25,22 @@ class Router
  
         // echo "{$method} {$uri}";
         // hhtps://google.com/search
- 
+        foreach ($this->routes as $route) {
+           $pattern = str_replace(search: '{id}', replace: '([0-9]+)', subject: $route['uri']);
+           $pattern = "#^" . $pattern . "$#";
+
+           if (preg_match($pattern, $uri, $matches)) {
+            require_once './app/controllers/' . $route['callback'] . '.php';
+            array_shift($matches); // Remove the full match
+            $controllerClass = 'App\\Controllers\\' . $route['callback'];
+
+            $controller = new $controllerClass();
+            $function = $route['function'];
+            $controller->$function();
+            return;
+          }
+        }
+
         if($method == 'GET' && $uri == '/students') {
             require_once './app/controllers/StudentsController.php';
             $controller = new StudentsController();
