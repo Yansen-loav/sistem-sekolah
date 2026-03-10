@@ -4,13 +4,11 @@
 {
     public function index()
     {
-        echo "<h1>Students Page</h1>";
-        echo "<p>Show students list</p>";
+        require_once '../app/views/students/index.php';
     }
 
     public function create()
     {
-        echo "<h1>Tambah Siswa</h1>";
-        echo "<p>Menambahkan siswa baru</p>";
+        require_once '../app/views/students/create.php';
     }
 }
