@@ -48,9 +48,22 @@
  
         }      
  
-@keyframes muter {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes muter{
+    0% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    25% {
+        transform: translate(100px,-50px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-100px,50px) rotate(180deg);
+    }
+    75% {
+        transform: translate(50px,100px) rotate(270deg);
+    }
+    100% {
+        transform: translate(0,0) rotate(360deg);
+    }
 }
         .isian > label{
             color: red;
@@ -87,8 +100,6 @@
  
     <form action="" class="isian">
        <img src="/assets/Group 99 1.png" alt="">
-        <img src="/assets/Group 99 1.png" alt="">
-         <img src="/assets/Group 99 1.png" alt="">
     </form>
  
     <script>
@@ -167,9 +178,9 @@ animate();
                     <td class="px-4 py-2 text-left">085849264487</td>
                     <td class="px-4 py-2">
                         <div class="flex justify-center items-center gap-4">
-                            <a href="" class="text-blue-500 hover:text-blue-700">Detail</a>
-                            <a href="" class="text-green-500 hover:text-green-700">Edit</a>
-                            <a href="" class="text-red-500 hover:text-red-700">Hapus</a>
+                            <a href="/students/1" class="text-blue-500 hover:text-blue-700">Detail</a>
+                            <a href="/students/1/edit" class="text-green-500 hover:text-green-700">Edit</a>
+                            <a href="/students/1/delete" class="text-red-500 hover:text-red-700">Hapus</a>
                         </div>
                     </td>
                 </tr>
