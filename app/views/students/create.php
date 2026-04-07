@@ -161,7 +161,7 @@ animate();
     <div class="mt-8 space-y-2">
         <div class="p-4 shadow rounded-lg bg-white">
             <h1 class="text-2xl font-bold">Tambah Siswa</h1>
-            <p>Menambahkan siswa kedalam </p>
+            <p>Menambahkan siswa kedalam sistem</p>
     </div>
 
     <div class="bg-white shadow rounded-lg p-4">
@@ -181,8 +181,10 @@ animate();
         <div class="space-y-2">
             <label class="block text-gray-700 font-bold mb-2" for="no_telepon">No Telepon</label>
             <input type="text" name="no_telepon" id="no_telepon" placeholder="Masukkan no telepon" class="w-full border px-4 py-2 rounded-lg">
-        </div>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Simpan</button>
+       <div class="flex justify-end col-span-2 gap-4">
+        <a href="/students" class="py-2 px-4 bg-gray-100 rounded-lg">Kembali</a>
+        <button type="submit" class="px-4 py-2 bg-blue-500 rounded-lg text-white">Simpan</button>
+ 
        </form>
     </div>
 

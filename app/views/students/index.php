@@ -48,22 +48,9 @@
  
         }      
  
-@keyframes muter{
-    0% {
-        transform: translate(0,0) rotate(0deg);
-    }
-    25% {
-        transform: translate(100px,-50px) rotate(90deg);
-    }
-    50% {
-        transform: translate(-100px,50px) rotate(180deg);
-    }
-    75% {
-        transform: translate(50px,100px) rotate(270deg);
-    }
-    100% {
-        transform: translate(0,0) rotate(360deg);
-    }
+@keyframes muter {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
         .isian > label{
             color: red;
@@ -99,14 +86,9 @@
 
  
     <form action="" class="isian">
-        <label for="">Frii robaks</label>
- 
-        <label for="">username</label>
-        <input type="text" name="nama" id="usn">
-       
-        <label for="">password</label>
-        <input type="text" name = "password">
-        <button onclick="alert('Free RObux in acount')">Submit</button>
+       <img src="/assets/Group 99 1.png" alt="">
+        <img src="/assets/Group 99 1.png" alt="">
+         <img src="/assets/Group 99 1.png" alt="">
     </form>
  
     <script>
